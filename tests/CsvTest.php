@@ -242,7 +242,7 @@ class CsvTest extends TestCase
         $this->expectException(\Exception::class);
         $this->expectExceptionMessage('Folder fake does not exist or is not writable');
 
-        $csv = new Csv('fake', 'my-csv');
+        new Csv('fake', 'my-csv');
     }
 
     public function testWithWithClosedFile(): void
